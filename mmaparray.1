@@ -1,0 +1,46 @@
+.TH MMAPARRAY 1
+.SH NAME
+mmaparray \- create a file based array
+.SH SYNOPSIS
+.B MMAPARRAY [options...]
+.SH DESCRIPTION
+using open(2) and mmap(2), create a file based array system
+which supported get, set, and delete commands 
+
+.SH OPTIONS
+
+.TP
+.BI --filename    <string>
+- specifies filename. to be used with "--create" or "--set"
+.TP
+.BI --index    <integer>
+- specifies the index being used for "--set" or "--get"
+.TP
+.BI --name    <string>
+- specifies the name to be used for "--set" 
+.TP
+.BI --age    <float>
+- specifies the age to be used for "--set"
+.TP
+.BI --get
+- prints the array entry from "--index"
+.TP
+.BI --set
+- modifies the array entry at "--index" with values from "--age" and "--name"
+.TP
+.BI --create
+- creates a new file array with the default name namedb unless specified by "--filename"
+.TP
+.BI --print
+- prints all entries in array
+.TP
+.BI --maxindex
+- returns the maximum index of the current working array
+.TP
+.BI --delete
+- deletes the entry specified by "--index"
+
+
+
+
+
